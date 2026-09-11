@@ -7,7 +7,11 @@ export default function LocationPanel({ location, onClose }) {
     <aside className="panel">
       <header className="panel__header" style={{ backgroundColor: location.color }}>
         <h2 className="panel__title">{location.name}</h2>
-        <button className="panel__close" onClick={onClose} aria-label="Cerrar panel">
+        <button
+          className="panel__close mdl-ripple"
+          onClick={onClose}
+          aria-label="Cerrar panel"
+        >
           ✕
         </button>
       </header>
