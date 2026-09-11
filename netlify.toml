@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  # Si no defines VITE_SITE_URL aquí, defínela en Netlify: Site settings → Environment variables.
+  # Si la definas en ambos sitios, la variable del sitio gana.
+  VITE_SITE_URL = "https://memoriasismoscalei.netlify.app"
+
+# Redirect SPA: sirve index.html ante cualquier ruta
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -4,16 +4,138 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#0000DD" />
-    <title>Memoria Sismos Cali — Mapa de Testimonios</title>
+
+    <!-- SEO -->
+    <title>Memoria Sismos Cali — Mapa interactivo de testimonios del terremoto</title>
+    <meta
+      name="description"
+      content="Mapa interactivo de Cali, Colombia con testimonios, imágenes y videos de los lugares emblemáticos afectados por el terremoto. La memoria colectiva de las víctimas en 6 puntos de la ciudad."
+    />
+    <meta
+      name="keywords"
+      content="terremoto Cali, sismo Cali, testimonios víctimas, memoria sísmica, mapa interactivo Cali, Colombia, lugares emblemáticos Cali"
+    />
+    <meta name="author" content="Memoria Sismos Cali" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revised" content="2026-09-10" />
+    <link rel="canonical" href="%VITE_SITE_URL%/" />
+
+    <!-- Geo -->
+    <meta name="geo.region" content="CO-CAL" />
+    <meta name="geo.placename" content="Cali, Valle del Cauca, Colombia" />
+    <meta name="geo.position" content="3.4516;-76.5320" />
+    <meta name="ICBM" content="3.4516, -76.5320" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="Memoria Sismos Cali" />
+    <meta property="og:title" content="Memoria Sismos Cali — Testimonios del terremoto en un mapa" />
+    <meta
+      property="og:description"
+      content="Recorre 6 lugares emblemáticos de Cali afectados por el terremoto y escucha los testimonios de las víctimas con texto, imágenes y videos."
+    />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta property="og:image" content="%VITE_SITE_URL%/favicon.svg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Memoria Sismos Cali — Testimonios del terremoto" />
+    <meta
+      name="twitter:description"
+      content="Mapa interactivo de Cali con testimonios de las víctimas del terremoto en 6 lugares emblemáticos."
+    />
+    <meta name="twitter:image" content="%VITE_SITE_URL%/favicon.svg" />
+
+    <!-- Recursos -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://tile.openstreetmap.org" />
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Datos estructurados -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "%VITE_SITE_URL%/#website",
+            "url": "%VITE_SITE_URL%/",
+            "name": "Memoria Sismos Cali",
+            "description": "Mapa interactivo de testimonios de las víctimas del terremoto de Cali.",
+            "inLanguage": "es-CO",
+            "publisher": { "@type": "Organization", "name": "Memoria Sismos Cali" }
+          },
+          {
+            "@type": "Place",
+            "name": "Plaza de Cayzedo",
+            "description": "Testimonio del terremoto en la Plaza de Cayzedo, Cali.",
+            "geo": { "@type": "GeoCoordinates", "latitude": 3.4536, "longitude": -76.5351 },
+            "address": { "@type": "PostalAddress", "addressLocality": "Cali", "addressRegion": "Valle del Cauca", "addressCountry": "CO" }
+          },
+          {
+            "@type": "Place",
+            "name": "Iglesia La Ermita",
+            "description": "Testimonio del terremoto en la Iglesia La Ermita, Cali.",
+            "geo": { "@type": "GeoCoordinates", "latitude": 3.4541, "longitude": -76.547 },
+            "address": { "@type": "PostalAddress", "addressLocality": "Cali", "addressRegion": "Valle del Cauca", "addressCountry": "CO" }
+          },
+          {
+            "@type": "Place",
+            "name": "Torre de San Antonio",
+            "description": "Testimonio del terremoto en la Torre de San Antonio, Cali.",
+            "geo": { "@type": "GeoCoordinates", "latitude": 3.4458, "longitude": -76.5487 },
+            "address": { "@type": "PostalAddress", "addressLocality": "Cali", "addressRegion": "Valle del Cauca", "addressCountry": "CO" }
+          },
+          {
+            "@type": "Place",
+            "name": "Estadio Pascual Guerrero",
+            "description": "Testimonio del terremoto en el Estadio Olímpico Pascual Guerrero, Cali.",
+            "geo": { "@type": "GeoCoordinates", "latitude": 3.4284, "longitude": -76.5467 },
+            "address": { "@type": "PostalAddress", "addressLocality": "Cali", "addressRegion": "Valle del Cauca", "addressCountry": "CO" }
+          },
+          {
+            "@type": "Place",
+            "name": "Parque del Perro",
+            "description": "Testimonio del terremoto en el Parque del Perro, Cali.",
+            "geo": { "@type": "GeoCoordinates", "latitude": 3.429, "longitude": -76.5342 },
+            "address": { "@type": "PostalAddress", "addressLocality": "Cali", "addressRegion": "Valle del Cauca", "addressCountry": "CO" }
+          },
+          {
+            "@type": "Place",
+            "name": "Puente Ortiz (Río Cali)",
+            "description": "Testimonio del terremoto en el Puente Ortiz sobre el río Cali.",
+            "geo": { "@type": "GeoCoordinates", "latitude": 3.4528, "longitude": -76.5525 },
+            "address": { "@type": "PostalAddress", "addressLocality": "Cali", "addressRegion": "Valle del Cauca", "addressCountry": "CO" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <main style="font-family: monospace; padding: 2rem; color: #fff; background: #0000dd">
+        <h1>Memoria Sismos Cali</h1>
+        <p>
+          Mapa interactivo de testimonios de las víctimas del terremoto de Cali, Colombia.
+          Activa JavaScript para ver el mapa.
+        </p>
+        <ul>
+          <li>Plaza de Cayzedo (3.4536, -76.5351)</li>
+          <li>Iglesia La Ermita (3.4541, -76.5470)</li>
+          <li>Torre de San Antonio (3.4458, -76.5487)</li>
+          <li>Estadio Pascual Guerrero (3.4284, -76.5467)</li>
+          <li>Parque del Perro (3.4290, -76.5342)</li>
+          <li>Puente Ortiz · Río Cali (3.4528, -76.5525)</li>
+        </ul>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -455,6 +455,33 @@ button {
   color: var(--muted);
 }
 
+/* ---------- Footer (semántico, sobre el mapa) ---------- */
+.footer {
+  position: absolute;
+  bottom: 82px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 999px;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer__sep {
+  opacity: 0.4;
+}
+
 /* ---------- Desktop: side sheet a la derecha ---------- */
 @media (min-width: 768px) {
   .layout {

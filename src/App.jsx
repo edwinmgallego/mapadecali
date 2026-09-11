@@ -39,11 +39,18 @@ export default function App() {
       <main className="layout">
         <div className="layout__map">
           <MapView selectedId={selectedId} onSelect={handleSelect} />
+
+          <footer className="footer" aria-label="Pie de página">
+            <span>Memoria Sismos Cali &copy; 2026 — Mapa de testimonios del terremoto</span>
+            <span className="footer__sep" aria-hidden="true">·</span>
+            <span>Cali, Valle del Cauca, Colombia</span>
+          </footer>
+
           {!panelOpen && !sheetOpen && (
-            <div className="hint">Toca un pin para leer el testimonio →</div>
+            <div className="hint" role="status">Toca un pin para leer el testimonio →</div>
           )}
 
-          <button className="fab mdl-ripple" onClick={toggleSheet} aria-label="Lugares">
+          <button className="fab mdl-ripple" onClick={toggleSheet} aria-label="Abrir lista de lugares">
             {sheetOpen ? '✕' : '☰'}
           </button>
         </div>
